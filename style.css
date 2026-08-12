@@ -830,3 +830,99 @@ img{max-width:100%}
 }
 
 .media-controls{display:none !important;}
+
+#domestic .detailed-cards{grid-template-columns:repeat(5,minmax(0,1fr))}
+#international .international-grid{grid-template-columns:repeat(4,minmax(0,1fr));max-width:1180px}
+@media(max-width:1180px){#domestic .detailed-cards{grid-template-columns:repeat(3,1fr)}#international .international-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){#domestic .detailed-cards,#international .international-grid{grid-template-columns:1fr}}
+
+
+/* Paket bölgesi görsel ayrımı */
+.region-tab{
+  display:inline-flex !important;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+}
+.region-tab .tab-symbol{
+  font-size:20px;
+  line-height:1;
+}
+.region-tab .flag-tr{
+  font-size:21px;
+}
+
+/* Yurt İçi: hafif kırmızı atmosfer */
+#domestic{
+  position:relative;
+  padding:22px;
+  border-radius:18px;
+  background:
+    radial-gradient(circle at 50% 10%,rgba(190,20,32,.16),transparent 46%),
+    linear-gradient(180deg,rgba(96,10,18,.11),rgba(25,3,6,.04));
+  border:1px solid rgba(210,40,50,.15);
+}
+#domestic .detailed-card{
+  background:
+    linear-gradient(180deg,rgba(46,10,14,.82),rgba(10,9,11,.98)) !important;
+  border-color:rgba(225,65,72,.28) !important;
+}
+#domestic .detailed-card:hover{
+  border-color:rgba(239,72,80,.55) !important;
+  box-shadow:0 16px 36px rgba(0,0,0,.48),0 0 24px rgba(190,20,32,.12);
+}
+
+/* Yurt Dışı: daha belirgin gold atmosfer */
+#international{
+  position:relative;
+  padding:22px;
+  border-radius:18px;
+  background:
+    radial-gradient(circle at 50% 8%,rgba(245,182,28,.20),transparent 48%),
+    linear-gradient(180deg,rgba(91,61,8,.14),rgba(15,11,3,.05));
+  border:1px solid rgba(245,182,28,.32);
+  box-shadow:inset 0 0 42px rgba(245,182,28,.035);
+}
+#international .detailed-card{
+  background:
+    linear-gradient(180deg,rgba(38,29,8,.92),rgba(10,9,6,.99)) !important;
+  border-color:rgba(245,182,28,.48) !important;
+  box-shadow:0 12px 30px rgba(0,0,0,.40),0 0 14px rgba(245,182,28,.055);
+}
+#international .detailed-card:hover{
+  border-color:rgba(255,207,73,.88) !important;
+  box-shadow:0 18px 38px rgba(0,0,0,.52),0 0 27px rgba(245,182,28,.16);
+}
+#international .price,
+#international .price small,
+#international .detailed-card h3{
+  color:#ffd45f !important;
+}
+#international .buy-now{
+  border-color:rgba(255,205,69,.80) !important;
+}
+#international .featured{
+  box-shadow:0 15px 34px rgba(0,0,0,.48),0 0 24px rgba(245,182,28,.14) !important;
+}
+
+/* Seçili sekmelerin bölge karakteri */
+.region-tab[data-panel="domestic"].active{
+  background:linear-gradient(180deg,#e44850,#9f1720) !important;
+  border-color:#ef6269 !important;
+  color:#fff !important;
+  box-shadow:0 0 20px rgba(210,30,42,.22) !important;
+}
+.region-tab[data-panel="international"].active{
+  background:linear-gradient(180deg,#ffdc72,#d89a12) !important;
+  border-color:#ffd35b !important;
+  color:#111 !important;
+  box-shadow:0 0 24px rgba(245,182,28,.28) !important;
+}
+
+@media(max-width:700px){
+  #domestic,#international{
+    padding:13px;
+    border-radius:14px;
+  }
+  .region-tab .tab-symbol{font-size:18px}
+}
