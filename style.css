@@ -926,3 +926,6 @@ img{max-width:100%}
   }
   .region-tab .tab-symbol{font-size:18px}
 }
+
+/* Ücretsiz deneme butonları kaldırıldı */
+.trial-btn,.hero-trial-btn,.btn.trial{display:none!important;}
