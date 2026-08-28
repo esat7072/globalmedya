@@ -929,3 +929,22 @@ img{max-width:100%}
 
 /* Ücretsiz deneme butonları kaldırıldı */
 .trial-btn,.hero-trial-btn,.btn.trial{display:none!important;}
+
+/* Ana ekran açıklama metni okunabilirlik iyileştirmesi */
+.hero-left .intro{
+  font-size:15px !important;
+  line-height:1.75 !important;
+  color:rgba(255,255,255,.90) !important;
+  max-width:650px;
+  text-shadow:0 1px 8px rgba(0,0,0,.35);
+}
+.hero-left .intro strong{
+  color:var(--gold2) !important;
+  font-weight:800;
+}
+@media (max-width:900px){
+  .hero-left .intro{font-size:14px !important;line-height:1.7 !important;}
+}
+@media (max-width:600px){
+  .hero-left .intro{font-size:13.5px !important;line-height:1.65 !important;}
+}
