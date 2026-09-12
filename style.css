@@ -1030,3 +1030,45 @@ img{max-width:100%}
     min-height:52px !important;
   }
 }
+
+/* FINAL: Ücretsiz Dene - masaüstü ve mobil görünür */
+.hero-left .actions .free-trial-btn{
+  display:inline-flex !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-height:53px !important;
+  padding:0 27px !important;
+  border:1px solid #d4af37 !important;
+  border-radius:6px !important;
+  background:linear-gradient(180deg,#ffdc72,#e6a413) !important;
+  color:#100d08 !important;
+  font-size:13px !important;
+  font-weight:900 !important;
+  text-decoration:none !important;
+  box-shadow:0 8px 22px rgba(245,182,28,.18) !important;
+  position:relative !important;
+  z-index:20 !important;
+}
+
+@media (max-width:650px){
+  .hero-left .actions{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:10px !important;
+    width:100% !important;
+  }
+  .hero-left .actions > a{
+    display:flex !important;
+    width:100% !important;
+    min-height:52px !important;
+    margin:0 !important;
+  }
+  .hero-left .actions .free-trial-btn{
+    display:flex !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    width:100% !important;
+  }
+}
