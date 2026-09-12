@@ -948,3 +948,19 @@ img{max-width:100%}
 @media (max-width:600px){
   .hero-left .intro{font-size:13.5px !important;line-height:1.65 !important;}
 }
+
+/* Ücretsiz Dene butonu */
+.trial-btn{
+  display:inline-flex !important;
+  align-items:center;
+  justify-content:center;
+  border:1px solid #d4af37;
+  background:linear-gradient(135deg,#f3cf64,#b8860b);
+  color:#080808 !important;
+  font-weight:800;
+  box-shadow:0 0 18px rgba(212,175,55,.22);
+}
+.trial-btn:hover{
+  transform:translateY(-1px);
+  box-shadow:0 0 24px rgba(212,175,55,.35);
+}
