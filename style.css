@@ -1072,3 +1072,5 @@ img{max-width:100%}
     width:100% !important;
   }
 }
+
+.free-trial-btn,.trial-btn,.hero-trial-btn,.btn.trial{display:none!important;}
